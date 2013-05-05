@@ -27,7 +27,6 @@ libPathList = [
 'C:/software_lib/boost/stage/lib',
 'C:/software_lib/SFML/lib',
 'C:/Python27/libs',
-'./bin'
 ]
 
 libList = [
@@ -61,15 +60,15 @@ libPathList_client = libPathList + ['./bin']
 
 # A main executable uses the library:
 
-exe = env.Program(
-target='./bin/simulator_prog.exe',
-source=Glob("#/src/main.cpp"),
-CPPPATH=pathList,
-LIBS=libList_client,
-LIBPATH=libPathList_client
-)
+# exe = env.Program(
+# target='./bin/simulator_prog.exe',
+# source=Glob("#/src/main.cpp"),
+# CPPPATH=pathList,
+# LIBS=libList_client,
+# LIBPATH=libPathList_client
+# )
 
-Default(exe)
+# Default(exe)
 
 
 # And tbe python wrapper uses the library:
